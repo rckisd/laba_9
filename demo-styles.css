@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.gradient {
+    width: 300px;
+    height: 100px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.linear-gradient {
+    background: linear-gradient(to right, red, yellow);
+}
+
+.radial-gradient {
+    background: radial-gradient(circle, red, yellow, green);
+}
+
+.conic-gradient {
+    background: conic-gradient(red, yellow, green, blue);
+}
+
+.transform-2d, .transform-3d {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.scale {
+    transform: scale(1.2);
+}
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+.translate3d {
+    transform: rotate3d(900, 800, 700, 30deg);
+}
+
+.rotate3d {
+    transform: rotate3d(900, 220, 30, 45deg);
+}
+
+.transition {
+    transition: all 1s ease;
+}
+
+.transition:hover {
+    background-color: orange;
+    transform: scale(1.2);
+}
+
