@@ -12,7 +12,7 @@ h1, h2, p {
 }
 
 .header {
-    background: linear-gradient(to right, #1f1f1f, #552c2c);
+    background: linear-gradient(to right, #1f1f1f, #2a2a2a);
     color: #fff;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -63,13 +63,26 @@ h1, h2, p {
 }
 
 .loader {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #333333;
-    border-top: 5px solid #03a9f4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 3s forwards;
+}
+
+.loader::after {
+    content: '';
+    border: 5px solid #fff;
+    border-top: 5px solid transparent;
     border-radius: 50%;
-    animation: spin 1.5s linear infinite;
-    margin: 0 auto 10px;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
 }
 
 .loader-text {
@@ -97,11 +110,13 @@ h1, h2, p {
 }
 
 @keyframes fadeOut {
-    to { opacity: 0; visibility: hidden; }
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; visibility: visible; }
+    0% { opacity: 0; }
+    100% { opacity: 1; visibility: visible; }
 }
 
 @keyframes fadeInImage {
